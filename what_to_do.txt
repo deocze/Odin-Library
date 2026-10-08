@@ -1,0 +1,8 @@
+1. Create a constructor that takes in arguments that make a book(Remember that all book objects should have an id)
+2. Create a function that uses the constructor to make books and store in the array
+
+Things to relearn: 
+
+How to create arrays and store things in there
+How to take input and put them in a constructor
+
