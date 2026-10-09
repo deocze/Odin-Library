@@ -16,13 +16,59 @@ function makeNewBook() {
   let form = document.createElement("form");
   form.id = "bookForm";
   let inputHeader1 = document.createElement("p");
+
+  let bookAuthor = document.createElement("input");
+  bookAuthor.type = "text";
+  bookAuthor.name = "bookAuthor";
+  bookAuthor.id = "bookAuthor";  
+  bookAuthor.classList.add("jsFormElements");
+
   let bookName = document.createElement("input");
   bookName.type = "text";
   bookName.name = "bookName";
-  bookName.id = "BookName";
-  bookName.placeholder = "Author";
+  bookName.id = "bookName";   
+  bookName.classList.add("jsFormElements");
 
+  let bookRead = document.createElement("input");
+  bookRead.type = "radio";
+  bookRead.name = "bookRead";
+  bookRead.id = "Read";
+  bookRead.classList.add("readChoice");
+
+  let bookRead2 = document.createElement("input");
+  bookRead2.type = "radio";
+  bookRead2.name = "bookRead";
+  bookRead2.id = "notRead";
+  bookRead2.classList.add("readChoice");
+
+  let bookPages = document.createElement("input");
+  bookPages.type = "number";
+  bookPages.name = "bookPages";
+  bookPages.id = "bookPages";   
+  bookPages.classList.add("jsFormElements");
+
+  let bookType = document.createElement("input");
+  bookType.type = "radio";
+  bookType.name = "bookType";
+  bookType.id = "Fiction";
+  bookType.classList.add("jsFormElements");
+
+  let bookType2 = document.createElement("input");
+  bookType2.type = "radio";
+  bookType2.name = "bookType";
+  bookType2.id = "Non_Fiction";
+  bookType2.classList.add("jsFormElements");
+
+  form.appendChild(bookAuthor);
   form.appendChild(bookName);
+  form.appendChild(bookPages);  
+  form.appendChild(bookRead);
+  form.appendChild(bookRead2);  
+  form.appendChild(bookType);
+  form.appendChild(bookType2);
+
+
+
   formCont.appendChild(form);
 
   let button = document.createElement("button");

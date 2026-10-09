@@ -1,28 +1,50 @@
-@font-face{
-    font-family: meaCulpa;
-    src: url(../Mea_Culpa/MeaCulpa-Regular.ttf) format('truetype');
+@font-face {
+  font-family: meaCulpa;
+  src: url(../Mea_Culpa/MeaCulpa-Regular.ttf) format("truetype");
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-direction: column;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
 }
-button{
-    font-size: 70px;
-    padding: 20px;
-    border-radius: 20px;
-    font-family: meaCulpa;
-    font-weight: 550;
-    background-image: url(../Images/idrctbh.jpeg);
-    color: #D2BBA0;
-    background-size: cover;
+button {
+  font-size: 70px;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: meaCulpa;
+  font-weight: 550;
+  background-image: url(../Images/idrctbh.jpeg);
+  color: #d2bba0;
+  background-size: cover;
 }
-button:hover{
-    opacity: 80%;
+button:hover {
+  opacity: 80%;
 }
-body{
-    background-image:url(../Images/backgroundImage.jpeg.jpeg);
-    background-size: cover;
+body {
+  background-image: url(../Images/backgroundImage.jpeg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+#bookForm {
+  display: grid;
+  grid-template: repeat(6, 1fr) / 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#bookAuthor {
+  grid-row: 1/2;
+}
+#bookName {
+  grid-row: 2/3;
+}
+#bookPages {
+  grid-row: 3/4;
+}
+.readChoice {
+  grid-row: 4/5;
 }
