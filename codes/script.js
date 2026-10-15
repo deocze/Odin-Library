@@ -15,7 +15,9 @@ function book(aut, ttle, rd, pgs, typ) {
 function makeNewBook() {
   let form = document.createElement("form");
   form.id = "bookForm";
+  
   let inputHeader1 = document.createElement("p");
+  inputHeader1.textContent = "Book Author:";
 
   let bookAuthor = document.createElement("input");
   bookAuthor.type = "text";
@@ -23,50 +25,89 @@ function makeNewBook() {
   bookAuthor.id = "bookAuthor";  
   bookAuthor.classList.add("jsFormElements");
 
+  let inputHeader2 = document.createElement("p");
+  inputHeader2.textContent = "Book Name:"; 
+
   let bookName = document.createElement("input");
   bookName.type = "text";
   bookName.name = "bookName";
   bookName.id = "bookName";   
   bookName.classList.add("jsFormElements");
 
-  let bookRead = document.createElement("input");
-  bookRead.type = "radio";
-  bookRead.name = "bookRead";
-  bookRead.id = "Read";
-  bookRead.classList.add("readChoice");
-
-  let bookRead2 = document.createElement("input");
-  bookRead2.type = "radio";
-  bookRead2.name = "bookRead";
-  bookRead2.id = "notRead";
-  bookRead2.classList.add("readChoice");
-
+  let inputHeader3 = document.createElement("p");
+  inputHeader3.textContent = "Number of pages:"; 
+   
   let bookPages = document.createElement("input");
   bookPages.type = "number";
   bookPages.name = "bookPages";
   bookPages.id = "bookPages";   
-  bookPages.classList.add("jsFormElements");
+  bookPages.classList.add("jsFormElements");  
+
+  let inputHeader4 = document.createElement("p");
+  inputHeader4.textContent = "Book Read:"; 
+  inputHeader4.id = "bkReadLabel"
+
+  let inputHeader5 = document.createElement("p");
+  inputHeader5.textContent = "Book Type:"; 
+  inputHeader5.id = "bkTypeLabel"
+ 
+  let label1 = document.createElement("label");
+  label1.textContent = "Read: "; 
+  label1.id = "read";  
+  label1.classList.add("readChoice");    
+
+  let bookRead = document.createElement("input");
+  bookRead.type = "radio";
+  bookRead.name = "bookRead";
+
+  let bookRead2 = document.createElement("input");
+  bookRead2.type = "radio";
+  bookRead2.name = "bookRead";
+
+  let label2 = document.createElement("label");
+  label2.textContent = "Not read: "; 
+  label2.id = "notRead";
+  label2.classList.add("readChoice");
+
+  let label3 = document.createElement("label");
+  label3.textContent = "Fiction: ";  
+  label3.id = "fiction";
+  label3.classList.add("fictionOrNot");  
 
   let bookType = document.createElement("input");
   bookType.type = "radio";
   bookType.name = "bookType";
-  bookType.id = "Fiction";
-  bookType.classList.add("jsFormElements");
+  
+  let label4 = document.createElement("label");
+  label4.textContent = "Non-Fiction: "; 
+  label4.id = "Non_Fiction";
+  label4.classList.add("fictionOrNot");  
 
   let bookType2 = document.createElement("input");
   bookType2.type = "radio";
   bookType2.name = "bookType";
-  bookType2.id = "Non_Fiction";
-  bookType2.classList.add("jsFormElements");
 
+
+
+
+
+  form.appendChild(inputHeader1);
   form.appendChild(bookAuthor);
+  form.appendChild(inputHeader2);  
   form.appendChild(bookName);
+  form.appendChild(inputHeader3);  
   form.appendChild(bookPages);  
-  form.appendChild(bookRead);
-  form.appendChild(bookRead2);  
-  form.appendChild(bookType);
-  form.appendChild(bookType2);
-
+  form.appendChild(inputHeader4);   
+  form.appendChild(label1);  
+  label1.appendChild(bookRead);
+  form.appendChild(label2);  
+  label2.appendChild(bookRead2);  
+  form.appendChild(inputHeader5);  
+  form.appendChild(label3);   
+  label3.appendChild(bookType);
+  form.appendChild(label4);   
+  label4.appendChild(bookType2);
+  
 
 
   formCont.appendChild(form);

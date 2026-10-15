@@ -2,6 +2,10 @@
   font-family: meaCulpa;
   src: url(../Mea_Culpa/MeaCulpa-Regular.ttf) format("truetype");
 }
+@font-face {
+  font-family: Isometra;
+  src: url(../Isometra/Isometra-Regular.ttf) format("truetype");
+}
 body {
   display: flex;
   align-items: center;
@@ -10,8 +14,8 @@ body {
   flex-direction: column;
 }
 button {
-  font-size: 70px;
-  padding: 20px;
+  font-size: 5vw;
+  padding: 1.5vw;
   border-radius: 20px;
   font-family: meaCulpa;
   font-weight: 550;
@@ -31,20 +35,62 @@ body {
 }
 #bookForm {
   display: grid;
-  grid-template: repeat(6, 1fr) / 1fr;
+  grid-template: repeat(5, 1fr) / 1fr 200px 200px;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 #bookAuthor {
   grid-row: 1/2;
+  grid-column: 2/span 2; 
 }
 #bookName {
   grid-row: 2/3;
+  grid-column: 2/span 2;  
 }
 #bookPages {
   grid-row: 3/4;
+  grid-column: 2/span 2; 
 }
 .readChoice {
   grid-row: 4/5;
+  justify-self: center;
+  color: white;
+}
+.fictionOrNot{
+  grid-row: 5/6;
+  justify-self: center; 
+  color: white;   
+}
+label{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 30px;
+}
+#bookForm p{
+  color: #9FC3C8;
+  -webkit-text-stroke: 1px black;
+  grid-column: 1/2;
+  margin: 0px;
+  font-size: 35px;
+  font-family: Isometra;
+}
+#bkTypeLabel{
+  grid-row: 4/5;
+}
+#bkReadLabel{
+  grid-row: 5/6;
+}
+.jsFormElements{
+  border-radius: 40px;
+  width: 400px;
+  height: 20px;
+  justify-self: center;
+  font-size: 35px;
+  text-align: center;
+}
+.readChoice, .fictionOrNot{
+  width: 150px;
+
 }
