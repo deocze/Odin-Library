@@ -79,7 +79,7 @@ function makeNewBook() {
   bookType.name = "bookType";
   
   let label4 = document.createElement("label");
-  label4.textContent = "Non-Fiction: "; 
+  label4.textContent = "N-Fiction: "; 
   label4.id = "Non_Fiction";
   label4.classList.add("fictionOrNot");  
 
